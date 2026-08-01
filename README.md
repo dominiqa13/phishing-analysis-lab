@@ -1,57 +1,132 @@
 # Phishing Email Analysis Lab
 
-Hands-on phishing email investigation and analysis 
-practised as part of my SOC analyst preparation.
+A hands-on cybersecurity portfolio documenting phishing email investigations completed as part of my preparation for a SOC Analyst role.
 
-Each case documents a real phishing email sample 
-investigated using industry-standard tools and 
-methodology — the same process used by Tier 1 
-SOC analysts in real security operations centres.
+Each case study analyses a real phishing email sample using industry-standard investigative techniques to determine whether the email is legitimate or malicious. Investigations focus on email authentication, attacker infrastructure, Indicators of Compromise (IOCs), social engineering techniques, and evidence-based threat assessment.
 
 ---
 
-## Investigation Methodology
+# Investigation Methodology
 
-Every case follows this structured triage process:
+Every investigation follows a structured SOC-style triage workflow:
 
-1. Analyse email headers — From, Reply-To, Return-Path
-2. Check SPF, DKIM, DMARC authentication results
-3. Identify originating IP and run reverse DNS lookup
-4. Check IOCs against VirusTotal and URLScan.io
-5. Decode email body and identify malicious content
-6. Document all IOCs and make a verdict
-
----
-
-## Cases
-
-| Case | Email Subject | Verdict | Technique |
-|---|---|---|---|
-| Case 001 | Microsoft account unusual signin activity | Malicious | Microsoft impersonation via email harvesting |
+1. Analyse email headers (From, Reply-To, Return-Path, Message-ID, Received headers)
+2. Validate SPF, DKIM and DMARC authentication
+3. Investigate attacker infrastructure (domains, sender IP addresses and reverse DNS)
+4. Extract and document Indicators of Compromise (IOCs)
+5. Analyse the email body and identify phishing techniques
+6. Correlate findings using threat intelligence platforms
+7. Assess evidence and assign a confidence-based verdict
+8. Recommend defensive actions and detection opportunities
 
 ---
 
-## Tools Used
+# Case Studies
 
-- PhishTool — email analysis and decoding
-- MXToolbox — email header analysis
-- VirusTotal — IP and domain reputation checking
-- URLScan.io — safe URL investigation
-- base64decode.org — email body decoding
+| Case | Email Subject | Verdict | Attack Technique |
+|------|---------------|----------|------------------|
+| Case 001 | Microsoft account unusual signin activity | **Malicious** | Microsoft impersonation via email harvesting |
 
 ---
 
-## Skills Demonstrated
+# Tools Used
 
-- Email header analysis and authentication checking
-- SPF, DKIM, DMARC interpretation
-- IOC identification and documentation
-- Phishing technique classification
-- Professional investigation report writing
-- Triage verdict and confidence assessment
+- **PhishTool** — email parsing, decoding and header analysis
+- **MXToolbox** — email authentication and DNS analysis
+- **VirusTotal** — IP and domain reputation analysis
+- **URLScan.io** — URL investigation (where applicable)
+- **Base64Decode.org** — email body decoding
 
 ---
 
-*All analysis performed on phishing samples from 
-public research collections for educational purposes. 
-No real victims or live systems involved.*
+# Skills Demonstrated
+
+## Email Security
+
+- Email Header Analysis
+- Email Authentication Analysis
+- SPF
+- DKIM
+- DMARC
+
+## Threat Investigation
+
+- Phishing Analysis
+- Threat Analysis
+- Indicators of Compromise (IOC) Identification
+- Attacker Infrastructure Analysis
+- Reverse DNS (rDNS) Investigation
+- Domain Reputation Analysis
+- IP Reputation Analysis
+
+## Defensive Analysis
+
+- Social Engineering Analysis
+- Threat Intelligence Correlation
+- Confidence-Based Threat Assessment
+- Security Recommendations
+- Detection Opportunity Identification
+
+## Documentation
+
+- SOC Investigation Reporting
+- Technical Documentation
+- Evidence-Based Analysis
+
+---
+
+# Repository Structure
+
+```
+Phishing-Email-Analysis-Lab/
+│
+├── README.md
+│
+├── cases/
+│   └── case-001-microsoft-account-impersonation/
+│       ├── README.md
+│       └── screenshots/
+│
+└── screenshots/
+```
+
+---
+
+# Current Investigations
+
+## Case 001 — Microsoft Account Impersonation
+
+**Summary**
+
+Analysed a phishing email impersonating the Microsoft Account Security Team. The investigation identified a mailto-based email harvesting campaign that used urgency and social engineering instead of malicious URLs to confirm active email addresses.
+
+**Key investigation activities**
+
+- Email header analysis
+- SPF, DKIM and DMARC validation
+- Attacker infrastructure investigation
+- IOC extraction and documentation
+- Email harvesting technique analysis
+- Threat intelligence correlation
+- High-confidence phishing verdict
+- Recommended defensive actions
+
+---
+
+# Future Investigations
+
+This repository will continue to grow with additional phishing investigations covering techniques such as:
+
+- Credential harvesting
+- Business Email Compromise (BEC)
+- QR code phishing (Quishing)
+- Attachment-based phishing
+- Cloud service impersonation
+- Financial and invoice scams
+- Multi-stage phishing campaigns
+
+---
+
+## Disclaimer
+
+All investigations are performed on publicly available phishing samples for educational and research purposes only. No live attacks were conducted, no production systems were targeted, and no real victims were involved.
