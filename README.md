@@ -113,20 +113,6 @@ Analysed a phishing email impersonating the Microsoft Account Security Team. The
 
 ---
 
-# Future Investigations
-
-This repository will continue to grow with additional phishing investigations covering techniques such as:
-
-- Credential harvesting
-- Business Email Compromise (BEC)
-- QR code phishing (Quishing)
-- Attachment-based phishing
-- Cloud service impersonation
-- Financial and invoice scams
-- Multi-stage phishing campaigns
-
----
-
 ## Disclaimer
 
 All investigations are performed on publicly available phishing samples for educational and research purposes only. No live attacks were conducted, no production systems were targeted, and no real victims were involved.
